@@ -6,6 +6,7 @@ set cindent
 
 " hight light search
 set hlsearch
+set incsearch
 
 " Enable file type check
 filetype on
