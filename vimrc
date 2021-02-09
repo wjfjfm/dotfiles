@@ -21,3 +21,6 @@ filetype on
 
 " Enable syntax highlight
 syntax on
+
+" Enable the number syntax before lines
+set number
