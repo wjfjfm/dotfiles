@@ -24,3 +24,7 @@ syntax on
 
 " Enable the number syntax before lines
 set number
+
+" Use zsh like autocomplet menu
+set wildmenu
+set wildmode=full
