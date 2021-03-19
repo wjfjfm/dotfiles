@@ -28,3 +28,6 @@ set number
 " Use zsh like autocomplet menu
 set wildmenu
 set wildmode=full
+
+" Automatically switch to case-sensitive search if use any capital letters
+set smartcase
