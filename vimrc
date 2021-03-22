@@ -31,3 +31,9 @@ set wildmode=full
 
 " Automatically switch to case-sensitive search if use any capital letters
 set smartcase
+
+" Set the color scheme
+colorscheme molokai
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
