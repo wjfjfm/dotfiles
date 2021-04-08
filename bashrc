@@ -12,7 +12,7 @@ function bash_getstarttime (){
 function bash_getstoptime (){
   # reads stored epoch time and subtracts from current
   local endtime=$(gdate +%s.%N)
-  local starttime=$(cat /Volumes/RAMDisk//${USER}.bashtime.${1})
+  local starttime=$(cat /Volumes/RAMDisk/${USER}.bashtime.${1})
   roundseconds $(echo $(eval echo "$endtime - $starttime") | bc)
 }
 
