@@ -1,7 +1,8 @@
 # Shell Timer
 function roundseconds (){
   # rounds a number to 3 decimal places
-  echo "m=${1};scale=3;m/1" | bc
+  # echo "m=${1};scale=3;m/1" | bc
+  printf "%.6g" $(bc <<< "m=${1};m*1000")
 }
 
 function bash_getstarttime (){
@@ -25,8 +26,8 @@ function runonexit (){
 trap runonexit EXIT
 
 PS0='$(bash_getstarttime $ROOTPID)'
-PS_time='↑$(bash_getstoptime $ROOTPID)s↑ '
+PS_time='$(bash_getstoptime $ROOTPID)ms '
 
-PS1="\u@\h \w> "
+PS1="\u@\h \W> "
 PS1="$PS_time""$PS1"
 
