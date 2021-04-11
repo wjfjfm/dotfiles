@@ -38,5 +38,16 @@ set background=dark
 let g:molokai_original = 1
 let g:rehash256 = 1
 
+" define a reverse key to C-i, see more detail at: https://stackoverflow.com/questions/67042601
+function! BAT()
+        while getline(".")[col(".")-2] =~ "\\s"
+                normal X
+                if virtcol(".")%&tabstop == 1
+                        break
+                endif
+        endwhile
+endfunction
+imap <S-Tab> <C-O>:call BAT()<CR>
+
 " Back to current folder using :E
 set autochdir
