@@ -98,7 +98,7 @@ function roundseconds (){
   (( $D > 0 )) && printf '%dd' $D
   (( $H > 0 )) && printf '%dh' $H
   (( $M > 0 )) && printf '%dm' $M
-  (( $S > 0 )) && printf "%ds" $S
+  (( $D == 0 && $H == 0 && $S > 0 )) && printf "%ds" $S
   (( $S < 10)) && printf "%dms" $MS
 }
 
