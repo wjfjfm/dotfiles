@@ -99,7 +99,7 @@ function roundseconds (){
   (( $H > 0 )) && printf '%dh' $H
   (( $M > 0 )) && printf '%dm' $M
   (( $D == 0 && $H == 0 && $S > 0 )) && printf "%ds" $S
-  (( $S < 10)) && printf "%dms" $MS
+  (( $D == 0 && $H == 0 && $M == 0 && $S < 10)) && printf "%dms" $MS
 }
 
 function bash_getstarttime (){
