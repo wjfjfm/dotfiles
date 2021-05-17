@@ -56,4 +56,7 @@ imap <S-Tab> <C-O>:call BAT()<CR>
 set autochdir
 
 " setup a line length marker
-set colorcolumn=80
+" set colorcolumn=80
+
+" Keep 3 lines below and above the cursor
+set scrolloff=3
