@@ -32,6 +32,9 @@ set wildmode=full
 " Automatically switch to case-sensitive search if use any capital letters
 set smartcase
 
+" enable backspace to delete indent, eol, start
+set backspace=indent,eol,start
+
 " Set the color scheme
 colorscheme molokai
 set background=dark
