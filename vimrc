@@ -54,3 +54,6 @@ imap <S-Tab> <C-O>:call BAT()<CR>
 
 " Back to current folder using :E
 set autochdir
+
+" setup a line length marker
+set colorcolumn=80
