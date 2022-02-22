@@ -53,10 +53,24 @@ endfunction
 imap <S-Tab> <C-O>:call BAT()<CR>
 
 " Back to current folder using :E
-set autochdir
+" set autochdir
 
 " setup a line length marker
 " set colorcolumn=80
 
 " Keep 3 lines below and above the cursor
 set scrolloff=3
+
+" For ACM/OI
+map <f8> :!g++ -std=c++11 -g -O2 -Wall -fsanitize=address % -o %<<cr>
+map <f9> :!time ./%<<cr>
+map <f10> :!time ./% < %.in<<cr>
+
+" " map brackets
+" inoremap " ""<left>
+" inoremap ( ()<left>
+" inoremap { {}<left>
+" inoremap [ []<left>
+
+" use Mouse
+set mouse=a
