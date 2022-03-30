@@ -14,8 +14,13 @@ function roundseconds (){
   (( $D > 0 )) && printf '%dd' $D
   (( $H > 0 )) && printf '%dh' $H
   (( $M > 0 )) && printf '%dm' $M
-  (( $D == 0 && $H == 0 && $S > 0 )) && printf "%ds" $S
-  (( $D == 0 && $H == 0 && $M == 0 && $S < 10)) && printf "%dms" $MS
+  if (( $D == 0 && $H == 0 && $S > 0 )); then printf "%d" $S
+    if (( $S < 10 ));then printf ".%2ds" $(($MS/10))
+    elif (( $S < 100));then printf ".%1ds" $(($MS/100))
+    else printf "s"
+    fi
+  fi
+  (( $D == 0 && $H == 0 && $M == 0 && $S == 0 )) && printf "%3dms" $MS
 }
 
 function bash_getstarttime (){
