@@ -1,5 +1,8 @@
 color_prompt=yes
 
+# check if RAMDisk exist in this system
+[ ! -d "/Volumes/RAMDisk" ] && diskutil erasevolume HFS+ "RAMDisk" $(hdiutil attach -nomount ram://$((2 * 1024 * 10)))
+
 # Shell Timer
 function roundseconds (){
   local FS=$1
