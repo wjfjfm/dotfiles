@@ -126,5 +126,12 @@ PS0='$(bash_getstarttime $ROOTPID)'
 PS_time='\e[0;33m$(bash_getstoptime $ROOTPID)\e[m '
 
 # PS1="\u@\h \W> "
-PS1="$PS_time""$PS1"
+## You must wrap all escape sequences between \[ and \] in order for 'readline' to correctly calculate the prompt's visible length. Without them, 'readline' thinks the prompt is longer than it is, and doesn't know when the text reaches the margin.
+## FROM:
+## PS1="\e[0;31m[\u@\h \W]\$ \e[m "
+## TO:
+## PS1="\[\e[;31m\][\u@\h \W]\$ \[\e[m\]"
+
+PS1="\[$PS_time\]""\[$PS1\]"
+
 
