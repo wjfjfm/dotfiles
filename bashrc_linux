@@ -125,8 +125,6 @@ trap runonexit EXIT
 PS0='$(bash_getstarttime $ROOTPID)'
 PS_time='\e[0;33m$(bash_getstoptime $ROOTPID)\e[m '
 
-source ~/.bashrc_conda
-
 # PS1="\u@\h \W> "
 PS1="$PS_time""$PS1"
 
