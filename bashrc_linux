@@ -134,4 +134,6 @@ PS_time='\e[0;33m$(bash_getstoptime $ROOTPID)\e[m '
 
 PS1="\[$PS_time\]""\[$PS1\]"
 
+# if you want to define PATH or other system variables, goto .profile
+
 
