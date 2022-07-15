@@ -136,4 +136,5 @@ PS1="\[$PS_time\]""\[$PS1\]"
 
 # if you want to define PATH or other system variables, goto .profile
 
-
+# install fzf please! https://github.com/junegunn/fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
