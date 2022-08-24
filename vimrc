@@ -1,8 +1,17 @@
+" Map keys
+" Use arrow keys to move between panes
+map <up> <C-w><up>
+map <down> <C-w><down>
+map <left> <C-w><left>
+map <right> <C-w><right>
+
 " Make tabs as wide as 4 spaces and expand it automately
 set tabstop=4 shiftwidth=4 expandtab
 
 " auto indent
+set nocindent
 set autoindent
+set formatoptions=
 
 " Let tabs display as characters
 set list
@@ -96,11 +105,14 @@ endfunction
 command! -bang -nargs=+ -complete=dir AgIn call s:ag_in(<bang>0, <f-args>)
 
 " rainbow bracket
-Plug 'frazrepo/vim-rainbow'
+" Plug 'frazrepo/vim-rainbow'
+Plug 'luochen1990/rainbow'
 
 " full test search
 Plug 'mileszs/ack.vim'
 
+" Git Blame
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
